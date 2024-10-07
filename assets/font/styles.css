@@ -1,0 +1,157 @@
+:root {
+    --plq-color: #f08080; /* Parti libéral du Québec (PLQ) */
+    --pq-color: #004C9D;  /* Parti québécois (PQ) */
+    --qs-color: #FF8040;  /* Québec solidaire (QS) */
+    --pcq-color: #1db9e0; /* Parti conservateur du Québec (PCQ) */
+    --caq-color: #1e90ff; /* Coalition avenir Québec (CAQ) */
+    --cq-color: #13876c;  /* Climat Québec (CQ) */
+}
+
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('gilroy-extrabold-webfont.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 700px;
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+header {
+    text-align: center; 
+    margin-bottom: 50px; 
+    font-family: 'Gilroy', sans-serif; 
+}
+
+h1 {
+    font-size: 4em; 
+    color: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+
+h2 {
+    font-size: 2.5em; 
+    color: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+.candidate {
+    display : flex; 
+    margin: 0px 50px 0px; 
+    padding: 15px 30px; 
+    border: 1px solid black; 
+    justify-content: space-between; 
+    align-items: center; 
+    cursor: pointer; 
+    background-color: #ffffff; 
+}
+
+.candidate-info {
+    text-align: left; 
+}
+
+.candidate-name {
+    margin: 10px 0 0; 
+}
+
+.candidate-party {
+    margin: 0; 
+}
+
+.candidate:hover {
+    transform: translateX(20px); 
+    background-color: var(--plq-color); 
+}
+.candidate[data-party-color='var(--plq-color)']:hover {
+    background-color: var(--plq-color); 
+
+}
+.candidate[data-party-color='var(--pq-color)']:hover {
+    background-color: var(--pq-color);
+}
+.candidate[data-party-color='var(--qs-color)']:hover {
+    background-color: var(--qs-color);
+}
+.candidate[data-party-color='var(--pcq-color)']:hover {
+    background-color: var(--pcq-color);
+}
+.candidate[data-party-color='var=(--caq-color)']:hover {
+    background-color: var(--caq-color);
+}
+.candidate[data-party-color='var=(--cq-color)']:hover {
+    background-color: var(--cq-color);
+}
+
+
+.candidate:hover .fa-regular {
+    display: none; 
+}
+
+.candidate:hover .fa-circle-check {
+    display: inline; 
+}
+
+
+.candidate .fa-circle {
+    display: inline; 
+}
+
+.candidate .fa-circle-check {
+    display: none; 
+}
+
+.footer {
+    margin-top: 30px; 
+    text-align: center; 
+}
+
+
+.vote-button-container {
+    margin-bottom: 20px; 
+}
+
+
+.vote-button {
+    padding: 10px 20px; 
+    background-color: #a2a2a2; 
+    color: rgb(0, 0, 0); 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 1.2em; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.vote-button:hover {
+    background-color: #424242; 
+    color: rgb(255, 255, 255); 
+}
+
+
+.footer-content {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 50px; 
+}
+
+
+.footer-content span {
+    margin-right: 10px; 
+}
+
+
+.logo {
+    height: 24px; 
+}
